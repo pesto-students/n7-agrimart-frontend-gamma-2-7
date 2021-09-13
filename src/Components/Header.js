@@ -1,12 +1,13 @@
 import React from 'react';
-import {NavDropdown,Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
+import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
+import Logo from "../assests/AgroMart.png";
 
 
 
 export default function Header() {
     return (
     <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="#"><strong>AgriMart</strong></Navbar.Brand>
+    <Navbar.Brand href="#"><img src={Logo} alt ="" /></Navbar.Brand>
     <Form className="search">
         <FormControl
           type="search"
@@ -27,12 +28,7 @@ export default function Header() {
             <i className='fas fa-heart'></i>
         </Nav.Link>
         <Nav.Link href="#home">SignUp</Nav.Link>
-        <NavDropdown title="Login" className="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-        </NavDropdown>
+        <Nav.Link href="#home">Login</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
