@@ -1,11 +1,12 @@
 import React from 'react';
-import {Navbar,Nav,Form,FormControl,Button} from 'react-bootstrap';
+import {Navbar,Nav,Container,Form,FormControl,Button} from 'react-bootstrap';
 import Logo from "../assests/AgroMart.png";
 
 
 
 export default function Header() {
     return (
+     <header>  
     <Navbar bg="light" expand="lg">
     <Navbar.Brand href="#"><img src={Logo} alt ="" /></Navbar.Brand>
     <Form className="search">
@@ -17,7 +18,7 @@ export default function Header() {
         />
         <Button variant="outline-success">Search</Button>
       </Form>
-    {/* <Navbar.Toggle aria-controls="navbarScroll" /> */}
+    <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse className='justify-content-end header'>
       <Nav
         className="header"
@@ -31,6 +32,8 @@ export default function Header() {
         <Nav.Link href="#home">Login</Nav.Link>
       </Nav>
     </Navbar.Collapse>
+    {/* </Container> */}
   </Navbar>
+  </header> 
     )
 }
