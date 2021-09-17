@@ -3,6 +3,7 @@ import './App.css';
 import ProductCarousel from './Components/ProductCarousel';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Product from './Components/Product';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header/>
       <ProductCarousel/>
       <Product/>
+      <Footer/>
     </div>
     </Router>
   );
