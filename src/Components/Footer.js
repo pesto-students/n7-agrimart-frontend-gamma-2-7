@@ -1,10 +1,11 @@
 import React from 'react'
 import SimpleReactFooter from "simple-react-footer";
+import FooterLogo from "../assests/footerlogo.png";
 
 
 const Footer =() => {
   const description = "AgroMart is a platform to connect farmers directly to customers. We help farmers to buy, sell, or rent their products by providing a platform and also farmer can buy farming product.";
-  const title = "AgroMart";
+  const title = "AgroMart"
   const columns = [
     {
         title: "Resources",
@@ -37,21 +38,10 @@ const Footer =() => {
             }
         ]
     },
-    {
-        title: "Visit",
-        resources: [
-            {
-                name: "Locations",
-                // link: "#"
-            },
-            {
-                name: "Culture",
-                // link: "#"
-            }
-        ]
-    }
  ];
- return <SimpleReactFooter 
+ return (
+     <>
+      <SimpleReactFooter 
     description={description} 
     title={title}
     columns={columns}
@@ -67,6 +57,8 @@ const Footer =() => {
     fontColor="black"
     copyrightColor="darkgrey"
     className="Footer"
- />;
-};
+ />
+ </>
+ )};
+ 
 export default Footer;
