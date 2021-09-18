@@ -16,7 +16,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -31,7 +31,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -46,7 +46,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -61,7 +61,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -78,7 +78,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -93,7 +93,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -108,7 +108,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
@@ -123,7 +123,7 @@ const Product =() =>{
                 <Card.Title as='p'>
                 <strong>Price:</strong>Rs20/Kg
                 </Card.Title>
-                <Button className="my-2 p-1 w-100" variant="outline-success">Add to Wishlist</Button>
+                <Button className="my-2 p-1 w-100 wishlistbutn" >Add to Wishlist</Button>
                 <Button className="my-2 p-1 w-100"  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
