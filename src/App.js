@@ -4,9 +4,9 @@ import ProductCarousel from './Components/ProductCarousel';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 // import Product from './Components/Product';
 import Footer from './Components/Footer';
-import Home from './Screens/Home';
-import Register from './Screens/Register';
-import Login from './Screens/Login';
+import Home from './Pages/Home';
+import Register from './Pages/Register';
+import Login from './Pages/Login';
 
 function App() {
   return (
