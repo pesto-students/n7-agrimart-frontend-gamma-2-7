@@ -10,7 +10,11 @@ function App() {
     <Router>
     <div>
       <Header/>
-      <Home/>
+      <main className='py-3'>
+      <Route path='/' component={Home} exact />
+      <Route path='/register' component={Register} />
+      <Route path='/login' component={Login} />
+      </main>
       <Footer/>
     </div>
     </Router>
