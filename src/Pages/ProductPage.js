@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
-import Rating from '../components/Rating'
-import Message from '../components/Message'
-import Loader from '../components/Loader'
+import Rating from '../Components/Rating'
 
-const ProductScreen = ({ history, match }) => {
-  const [qty, setQty] = useState(1)
-  const [rating, setRating] = useState(0)
-  const [comment, setComment] = useState('')
+
+const ProductPage = ({ history, match }) => {
+ 
 
   return (
     <>
@@ -18,42 +14,52 @@ const ProductScreen = ({ history, match }) => {
       </Link>
         <>
         <Row>
-          <Col md={6}>
-            <Image src="https://picsum.photos/500/450" alt="" fluid />
+          <Col md={4} className="ml-3">
+            <Image src="https://picsum.photos/350/350" alt="" fluid />
           </Col>
           <Col md={3}>
           <ListGroup variant='flush'>
                 <ListGroup.Item>
-                <h3>Rice</h3>
+                <h4>Rice</h4>
                 </ListGroup.Item>
-                <ListGroup.Item>Price:RS 20/Kg</ListGroup.Item>
+                <ListGroup.Item><p style={{fontWeight:"900"}}>Price:</p>RS 20/Kg</ListGroup.Item>
                 <ListGroup.Item>
                   Description:"Rice is cooked by boiling, or it can be ground into a flour. It is eaten alone and in a great variety of soups, side dishes, and main dishes in Asian, Middle Eastern, and many other cuisines. Other products in which rice is used are breakfast cereals, noodles, and such alcoholic beverages as Japanese sake."
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>
+            <Col md={3} className="ml-2">
               <Card>
+              <Card className="prodimage"> 
+              <Card.Img variant="center" className="Prdouctimage" src="https://picsum.photos/350/350" />
+              </Card> 
                 <ListGroup variant='flush'>
                   <ListGroup.Item>
                     <Row>
-                      <Col>
-                        <strong>Account Holder</strong>
+                      <Col style={{fontWeight:"900"}}>
+                        Account Holder
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
-                      <Rating/>
+                      <strong>Ratings</strong>
+                    <Rating value={5}/>
                 </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                    <Col>Contact Details:</Col>
+                    <Col><strong>Contact Details:</strong></Col>
+                    </Row>
+                    <Row>
                     <Col>
                     +91-99999999
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                     +91-99999999
                     </Col>
+                    </Row>
+                    <Row>
                     <Col>
                     AccountHolder@email.com
                     </Col>
@@ -125,4 +131,4 @@ const ProductScreen = ({ history, match }) => {
     </>
   )
 }
-export default ProductScreen
+export default ProductPage;

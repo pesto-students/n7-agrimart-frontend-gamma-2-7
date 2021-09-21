@@ -95,7 +95,40 @@ h2 {
 }
 .Registerbtn {
   background-color: #648e06 !important;
+  width: 50%;
+  border-radius: 20px !important;
 }
 .navbar {
   padding: 0px !important;
+}
+.Prdouctimage{
+  display: flex;
+  justify-items: center;
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+}
+.prodimage{
+  background-color: #648e06 !important;
+  display: flex;
+  align-items: center !important;
+
+}
+/*searchbar*/
+.dropdown-toggle{
+  border-radius: 20px 0px 0px 20px !important;
+  height: 45px !important;
+  border:  1px solid #648e06 !important;
+}
+.search{
+  border-radius: 0px 20px 20px 0px !important;
+  width: 127px;
+  background-color: #648e06 !important;
+  height: 45px;
+}
+.searchbar{
+  border:  1px solid #648e06 !important;
+}
+* :focus{
+  box-shadow: none !important;
 }

@@ -25,19 +25,6 @@ const Footer =() => {
     
         ]
     },
-    {
-        title: "Legal",
-        resources: [
-            {
-                name: "Privacy",
-                // link: "#"
-            },
-            {
-                name: "Terms",
-                // link: "#"
-            }
-        ]
-    },
  ];
  return (
      <>

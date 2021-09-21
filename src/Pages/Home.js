@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
         <ProductCarousel />
-      <h1>Latest Products</h1>
         <>
          <Product/>
         </>
