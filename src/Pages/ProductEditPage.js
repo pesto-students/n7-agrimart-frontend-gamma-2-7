@@ -1,10 +1,8 @@
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React, { useState, } from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Button,DropdownButton,Dropdown } from 'react-bootstrap'
-import Message from '../Components/Message'
 import Loader from '../Components/Loader'
-import FormContainer from '../Components/FormContainer'
+
 
 
 const ProductEditPage = ({ match, history }) => {
