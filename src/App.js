@@ -8,6 +8,7 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import ProductPage from './Pages/ProductPage';
 import ProductEditPage from './Pages/ProductEditPage';
+import WishList from './Components/WishList';
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
       <Route path='/' component={Home} exact />
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />
-      <Route path='/Product' component={ProductPage} />
+      <Route path='/product' component={ProductPage} />
       <Route path='/products' component={ProductEditPage} />
+      <Route path='/wishlist' component={WishList} />
       </main>
       <Footer/>
     </div>
