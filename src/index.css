@@ -132,3 +132,41 @@ h2 {
 * :focus{
   box-shadow: none !important;
 }
+.filtertitle{
+  color: #648e06 !important;
+}
+.fitercard{
+  display: flex;
+  align-items: center;
+}
+.filterbody{
+  padding: 0px !important;
+}
+/*footer*/
+.footernav{
+  display: flex;
+  flex-direction: column !important;
+  align-items: baseline !important;
+  background-color: #648e06 !important;
+}
+.footercontent{
+  display: flex;
+  color: white !important;
+}
+.footermain{
+  display: flex !important;
+  flex-direction: column !important;
+  width: 80%;
+}
+
+/* Sell page*/
+.Sellmain{
+  display: flex !important;
+  justify-content: space-around;
+}
+.Sellbar>.dropdown-toggle{
+  background-color: #f7f7f9 !important;
+  color: black !important;
+  border-radius: 0% !important;
+}
+

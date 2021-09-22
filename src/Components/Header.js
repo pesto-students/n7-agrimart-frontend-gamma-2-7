@@ -23,7 +23,7 @@ export default function Header() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link>
+        <Nav.Link href="/wishlist">
             <i className='fas fa-heart'></i>
         </Nav.Link>
         <Nav.Link href="/Register">SignUp</Nav.Link>
