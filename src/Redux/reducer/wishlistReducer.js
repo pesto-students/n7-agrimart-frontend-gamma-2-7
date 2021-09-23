@@ -8,6 +8,7 @@ import{ADD_TO_WISHLIST,REMOVE_ITEM,ADD_QUANTITY,SUBTRACT_QUANTITY} from "../cons
 
 const initialState={
     items:[
+        
         {id:1,title:"Tractor",location:"Mumbai",price:150,img:Tractor},
         {id:2,title:"Basmati Rice",location:"Punjab",price:100,img:Rice},
         {id:3,title:"Tomato",location:"Patna",price:15,img:tomato},

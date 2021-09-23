@@ -1,36 +1,39 @@
 import React from 'react';
 import { Carousel,Image } from 'react-bootstrap'
+import Tractor from "../assests/Tractor.jpg";
+import Pesticide from "../assests/Pesticides.jpg";
+import Rice from "../assests/Rice.jpg";
 
 const ProductCarousel = () => {
     return (
     <Carousel className="carousell" pause='hover'>
   <Carousel.Item>
     <Image
-      src="https://picsum.photos/500/300"
-      alt="First slide"
+      src={Tractor}
+      alt=""
     />
     <Carousel.Caption className="carousel-caption">
-      <h2>First slide label</h2>
+      <h2>For Rent</h2>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
   <Image
-      src="https://picsum.photos/500/300"
+      src={Pesticide}
       alt="First slide"
     />
 
     <Carousel.Caption className="carousel-caption">
-      <h2>Second slide label</h2>
+      <h2>Pesticides</h2>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
   <Image
-      src="https://picsum.photos/500/300"
+      src={Rice}
       alt="First slide"
     />
 
     <Carousel.Caption className="carousel-caption">
-      <h2>Third slide label</h2>
+      <h2>Basmati Rice</h2>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
