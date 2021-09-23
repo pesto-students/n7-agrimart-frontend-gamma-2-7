@@ -1,10 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, } from 'react-bootstrap'
 import Rating from '../Components/Rating'
+import {addToWishlist} from "../Redux/action/wishlistAction";
+import { connect } from 'react-redux';
 
 
-const ProductPage = ( ) => {
+const ProductPage = ({items}) => {
+    const [product,setProduct] = useState(items)
+    let filterItem = (prodname) =>{
+        const updated = items.filter(item =>{
+        return item.title === prodname
+    });
+    setProduct(updated)
+    }
  
 
   return (
@@ -74,4 +83,15 @@ const ProductPage = ( ) => {
     </>
   )
 }
-export default ProductPage;
+const mapStateToProps = (state)=>{
+    return {
+      items: state.items,
+    }
+  }
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        addToWishlist:(id)=>{dispatch(addToWishlist(id))}
+    }
+}   
+
+export default connect(mapStateToProps,mapDispatchToProps)(ProductPage)

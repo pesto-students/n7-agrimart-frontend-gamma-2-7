@@ -16,6 +16,7 @@ const ProductEditPage = ({ match, history }) => {
   const [countInStock, setCountInStock] = useState(0)
   const [description, setDescription] = useState('')
   const [uploading, setUploading] = useState(false)
+  const [checked,setChecked] = useState("Sell")
 
 
 
@@ -27,8 +28,8 @@ const ProductEditPage = ({ match, history }) => {
   }
 
 
-  const submitHandler = (e) => {
-    e.preventDefault()
+  const radioChange = (e) => {
+    setChecked(e.target.value)
   }
 
   return (
@@ -60,7 +61,6 @@ const ProductEditPage = ({ match, history }) => {
         </DropdownButton>
       </div>
       </div>
-
        <div>     
       <Form.Group controlId='description'>
               <Form.Label>Description</Form.Label>
@@ -71,6 +71,37 @@ const ProductEditPage = ({ match, history }) => {
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
+            <div className="ml-2">
+                <input className="ml-2" type="radio" checked={checked === "Sell"} value="Sell" name="gender" onChange={radioChange} /> Sell
+                <input className="ml-4" type="radio" checked={checked === "Rent"} value="Rent" onChange={radioChange} /> Rent
+            </div>
+            {(checked==='Sell') ?
+            <div className="sellinput">
+            <Form.Control className="sell" placeholder="price" />
+            <div>
+            <DropdownButton className="Sellba"   title="Dropdown button">
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </DropdownButton>
+            </div>
+            <Form.Control className="sell" placeholder="Quantity" />
+            <DropdownButton className="Sellba"   title="Dropdown button">
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </DropdownButton>
+            </div>
+             : <><div className="sellinput">
+             <Form.Control className="sell" placeholder="price" />
+             <div>
+             <DropdownButton className="Sellba"   title="Dropdown button">
+             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+             <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+             <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+             </DropdownButton>
+             </div>
+             </div></>}
             <Form.Group controlId='image'>
               <Form.Label>Image</Form.Label>
               <Form.Control
@@ -90,7 +121,7 @@ const ProductEditPage = ({ match, history }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
+            <Button className="submitbtn" type='submit' variant='primary'>
               Update
             </Button>
         </div>    
