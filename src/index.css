@@ -191,3 +191,7 @@ h2 {
 /* .Sellba>.dropdown-toggle:hover{
  color:#55595c !important;
 } */
+/*Login page*/
+.logintitle>.dropdown-toggle{
+  border: none !important;
+}

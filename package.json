@@ -16,6 +16,7 @@
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
     "simple-react-footer": "^1.0.2",
+    "thunk": "^0.0.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
