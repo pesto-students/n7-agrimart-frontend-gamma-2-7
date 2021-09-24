@@ -9,11 +9,14 @@ import Pesticide from "../assests/Pesticides.jpg";
 import Rice from "../assests/Rice.jpg";
 
 const Product =() =>{
-    const productList = useSelector((state) => state.items)
+    const productList = useSelector((state) => state.items);
+    const productState = useSelector((state) => state.product.product);
+    console.log(productState,'products from store ')
     const {items} = productList
+    
+    const [product,setProduct] = useState(items);
 
-    const [product,setProduct] = useState(items)
-
+      
     const handleClick=(id)=>{
         addToWishlist(id);
         console.log(addToWishlist(id))
@@ -74,7 +77,7 @@ const Product =() =>{
             </Col>
         </Row>
         <h1 className="ml-2">Latest Products</h1>
-        {product.map(item =>
+        {product && product.map(item =>
         <Row className="ml-2 mr-2">
         <Col sm={12} md={6} lg={4} xl={3}>
         <Card className="my-3 p-3 rounded">
