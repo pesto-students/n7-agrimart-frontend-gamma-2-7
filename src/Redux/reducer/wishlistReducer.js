@@ -22,7 +22,7 @@ const initialState={
     total:0
 }
 
-const wishlistReducer=(state=initialState,action)=>{
+export const wishlistReducer=(state=initialState,action)=>{
     if(action.type === ADD_TO_WISHLIST){
         let addedItem = state.items.find(item=> item.id === action.id)
       
@@ -94,8 +94,5 @@ if(action.type=== SUBTRACT_QUANTITY){
   }
 }
 
-
-
-export default wishlistReducer;
 
 
