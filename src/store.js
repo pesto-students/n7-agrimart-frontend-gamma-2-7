@@ -3,12 +3,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import {wishlistReducer} from "./Redux/reducer/wishlistReducer";
 import {userLoginReducer,userRegisterReducer,} from './Redux/reducer/UserReducer'
+import {fetchProudctReducer} from './Redux/reducer/productReducer'
 
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
     items:wishlistReducer,
-    userRegister: userRegisterReducer
+    userRegister: userRegisterReducer,
+    product:fetchProudctReducer
 })
 const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
