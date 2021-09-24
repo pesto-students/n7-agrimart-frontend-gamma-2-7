@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import {Card,Button} from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap'
 import { connect, useSelector } from "react-redux";
@@ -18,6 +19,7 @@ const Product =() =>{
         console.log(addToWishlist(id))
         console.log(addToWishlist())
     }
+
     let filterItem = (prodname) =>{
         const updated = items.filter(item =>{
         return item.title === prodname
@@ -59,14 +61,16 @@ const Product =() =>{
         </Card>
             </Col>
             <Col>
+            <Link to='/products'>
             <Card className="my-3 p-4 rounded filtercard" style={{ width: '14rem', height:'14rem' }}>
-            <Card.Img className="filterimg" src="https://picsum.photos/50/45" variant="top"/>
+            <Card.Img className="filterimg"  href='/products' src="https://picsum.photos/50/45" variant="top"/>
             <Card.Body className="filterbody">
                 <Card.Title className="filtertitle" as="p">
-                    Get Product on rent for farming.
+                    Add your products to Sell/Rent
                 </Card.Title>
             </Card.Body>
         </Card>
+        </Link>
             </Col>
         </Row>
         <h1 className="ml-2">Latest Products</h1>
@@ -149,16 +153,7 @@ const Product =() =>{
         </>
     ) 
 }
-const mapStateToProps = (state)=>{
-    return {
-      items: state.items,
-    }
-  }
-const mapDispatchToProps=(dispatch)=>{
-    return{
-        addToWishlist:(id)=>{dispatch(addToWishlist(id))}
-    }
-}   
 
-export default connect(mapStateToProps,mapDispatchToProps)(Product)
+
+export default Product;
 
