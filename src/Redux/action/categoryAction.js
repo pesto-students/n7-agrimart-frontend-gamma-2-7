@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { 
-    GET_PRODUCTS_REQUEST,
-    GET_PRODUCTS_SUCCESS,
-    GET_PRODUCTS_FAIL,
-} from "../constant/productConstant";
+  GET_CATEGORIES_REQUEST,
+  GET_CATEGORIES_SUCCESS,
+  GET_CATEGORIES_FAIL,
+} from "../constant/categoryConstant";
 
-export const fetchProducts = () => async (dispatch) => {
+export const fetchCategories = () => async (dispatch) => {
 try{
     dispatch({
-        type:GET_PRODUCTS_REQUEST
+        type:GET_CATEGORIES_REQUEST
     })
     const config = {
         headers: {
@@ -16,18 +16,18 @@ try{
         },
       }
       const { data } = await axios.get(
-        `https://agro-mart-master-mci3mdx9yjmzf.herokuapp.com/v1/products`,
+        `https://agro-mart-master-mci3mdx9yjmzf.herokuapp.com/v1/categories`,
         config
       ) 
-      console.log(data, 'data from api');
+      console.log(data, 'categories from api');
       dispatch({
-        type: GET_PRODUCTS_SUCCESS,
+        type: GET_CATEGORIES_SUCCESS,
         payload: data,
       })
 }
 catch (error) {
     dispatch({
-      type: GET_PRODUCTS_FAIL,
+      type: GET_CATEGORIES_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
