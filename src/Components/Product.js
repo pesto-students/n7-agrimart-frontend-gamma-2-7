@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import {Card,Button} from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap'
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import {addToWishlist} from "../Redux/action/wishlistAction";
 import Tractor from "../assests/Tractor.jpg";
 import Pesticide from "../assests/Pesticides.jpg";
 import Rice from "../assests/Rice.jpg";
 
-const Product =({items}) =>{
+const Product =() =>{
+    const productList = useSelector((state) => state.items)
+    const {items} = productList
 
     const [product,setProduct] = useState(items)
 
@@ -84,7 +86,7 @@ const Product =({items}) =>{
                 <strong>Price:</strong>Rs{item.price}/Kg
                 </Card.Title>
                 <Button className="my-2 p-1 w-100 wishlistbutn" onClick={()=>handleClick(item.id)} >Add to Wishlist</Button>
-                <Button className="my-2 p-1 w-100" href={`/product/${item.id}`}   style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
+                <Button className="my-2 p-1 w-100" href='/product'  style={{backgroundColor:"#648E06",border:"1px solid #648E06"}} variant="primary">Contact Supplier</Button>
             </Card.Body>
         </Card>
         </Col>

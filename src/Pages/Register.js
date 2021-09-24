@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../Components/Message'
 import Loader from '../Components/Loader'
 import FormContainer from '../Components/FormContainer'
-// import { register } from '../actions/userActions'
+import { register } from '../Redux/action/UserAction'
 
 const Register = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -14,34 +14,34 @@ const Register = ({ location, history }) => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState(null)
 
-//   const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-//   const userRegister = useSelector((state) => state.userRegister)
-//   const { loading, error, userInfo } = userRegister
+  const userRegister = useSelector((state) => state.userRegister)
+  const { loading, error, userInfo } = userRegister
 
   const redirect = location.search ? location.search.split('=')[1] : '/'
 
-//   useEffect(() => {
-//     if (userInfo) {
-//       history.push(redirect)
-//     }
-//   }, [history, userInfo, redirect])
+  useEffect(() => {
+    if (userInfo) {
+      history.push(redirect)
+    }
+  }, [history, userInfo, redirect])
 
   const submitHandler = (e) => {
     e.preventDefault()
     if (password !== confirmPassword) {
       setMessage('Passwords do not match')
     } else {
-    //   dispatch(register(name, email, password))
+      dispatch(register(name, email, password))
     }
   }
 
   return (
     <FormContainer>
       <h1>Sign Up</h1>
-      {/* {message && <Message variant='danger'>{message}</Message>}
+      {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
-      {loading && <Loader />} */}
+      {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='name'>
           <Form.Label>Name</Form.Label>

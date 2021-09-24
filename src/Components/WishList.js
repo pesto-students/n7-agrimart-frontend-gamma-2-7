@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Row,Col,Card } from 'react-bootstrap';
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+
 import {removeItem} from "../Redux/action/wishlistAction";
 
-const Wishlist =({items})=>{
+const Wishlist =({item})=>{
     const handleRemove= (id)=>{
         removeItem(id);
     }
     return (
         <>
-        {items.map(item =>
+        {/* {items.map(item => */}
             <Row key={item.id}>
                 <Col>
                     <div>
@@ -24,21 +23,11 @@ const Wishlist =({items})=>{
                     </div>
                 </Col>
             </Row>
-            )}
+            {/* )} */}
 
         </>
     )
 }
-const mapStateToProps = (state)=>{
-    console.log(state)
-    return{
-        items: state.addedItems
-    }
-}
-const mapDispatchToProps=(dispatch)=>{
-    return{
-        removeItem:(id)=>{dispatch(removeItem(id))},
-    }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Wishlist)
+
+export default Wishlist;
