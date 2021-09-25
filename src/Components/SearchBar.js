@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Form, Button,DropdownButton,Dropdown,InputGroup } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 
 const SearchBar = ({ history }) => {
+  const categories = useSelector((state) => state.category.items)
+  console.log(categories, 'categories form search bar comp');
   const [keyword, setKeyword] = useState('')
 
   const submitHandler = (e) => {
@@ -14,20 +17,16 @@ const SearchBar = ({ history }) => {
   }
 
   return (
-    <Form className="mt-2"  onSubmit={submitHandler}>
-        <InputGroup className="mb-3">
-            <DropdownButton
-            variant="outline-secondary"
-            title="Categories"
-            // id="input-group-dropdown-1"
-            className="searchCatbtn"
-            >
-      <Dropdown.Item href="#">Vegetables</Dropdown.Item>
-      <Dropdown.Item href="#">Fruits</Dropdown.Item>
-      <Dropdown.Item href="#">Rent</Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item href="#"></Dropdown.Item>
-    </DropdownButton>
+    <Form className="mt-2" onSubmit={submitHandler}>
+      <InputGroup className="mb-3">
+        <DropdownButton
+          variant="outline-secondary"
+          title="Categories"
+          // id="input-group-dropdown-1"
+          className="searchCatbtn"
+        >
+          {categories && categories.map(item =><Dropdown.Item >{item.name}</Dropdown.Item>)}
+        </DropdownButton>
       <Form.Control
         type='text'
         name='q'
