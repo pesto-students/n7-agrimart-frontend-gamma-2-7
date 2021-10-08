@@ -14,7 +14,6 @@ export default function Header() {
 
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
-  // console.log(userInfo.user.name)
   const logoutHandler = () => {
     dispatch(logout())
   }
@@ -26,17 +25,15 @@ export default function Header() {
     <Navbar.Brand className="ml-2"><img src={Logo} alt ="" /></Navbar.Brand>
     </LinkContainer>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id='basic-navbar-nav'>
-    <Route render={({ history }) => <SearchBar  history={history} />} />
+    <Navbar.Collapse id='basic-navbar-nav' style={{marginLeft:'250px'}} >
+    <SearchBar />
+    {/* <Route render={({ history }) => <SearchBar  history={history} />} /> */}
       <Nav
         className="ml-auto"
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="/wishlist">
-            <i className='fas fa-heart'></i>
-        </Nav.Link>
-        <Nav.Link href="/Register">SignUp</Nav.Link>
+       {!userInfo && <Nav.Link href="/Register">SignUp</Nav.Link>}
         {/* <Nav.Link href="/login">Login</Nav.Link> */}
         {userInfo ? (
                   <NavDropdown className="logintitle" title={userInfo.user.name} id='username'>
@@ -50,7 +47,8 @@ export default function Header() {
                 ) : (
                   <LinkContainer to='/login'>
                     <Nav.Link>
-                      <i className='fas fa-user'></i> Sign In
+                    Sign In
+                      {/* <i className='fas fa-user'></i> Sign In */}
                     </Nav.Link>
                   </LinkContainer>
                 )}

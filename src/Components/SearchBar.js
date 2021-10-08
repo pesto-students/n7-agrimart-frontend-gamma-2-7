@@ -1,32 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Button,DropdownButton,Dropdown,InputGroup } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { fetchProducts } from '../Redux/action/productAction'
 
-const SearchBar = ({ history }) => {
-  const categories = useSelector((state) => state.category.items)
-  console.log(categories, 'categories form search bar comp');
-  const [keyword, setKeyword] = useState('')
+const SearchBar = () => {
+  const dispatch = useDispatch();
+  const [keyword, setKeyword] = useState('');
+
+  // const categories = useSelector((state) => state.category.items)
+
+  // useEffect(() => {
+  //   dispatch(fetchProducts({queryString:keyword, limit:8}));
+  // });
+
+  
+
+
+
 
   const submitHandler = (e) => {
     e.preventDefault()
     if (keyword.trim()) {
-      history.push(`/search/${keyword}`)
-    } else {
-      history.push('/')
+      dispatch(fetchProducts({queryString:keyword, limit:8}, `Results for ${keyword}`));
     }
   }
 
   return (
-    <Form className="mt-2" onSubmit={submitHandler}>
+    <Form className="mt-3" onSubmit={submitHandler}>
       <InputGroup className="mb-3">
-        <DropdownButton
+        {/* <DropdownButton
           variant="outline-secondary"
           title="Categories"
           // id="input-group-dropdown-1"
           className="searchCatbtn"
         >
-          {categories && categories.map(item =><Dropdown.Item >{item.name}</Dropdown.Item>)}
-        </DropdownButton>
+          {categories && categories.map(item =><Dropdown.Item key ={item.id} >{item.name}</Dropdown.Item>)}
+        </DropdownButton> */}
       <Form.Control
         type='text'
         name='q'

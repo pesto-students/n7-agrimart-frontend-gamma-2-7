@@ -11,12 +11,13 @@ import ProductEditPage from './Pages/ProductEditPage';
 import WishList from './Components/WishList';
 
 
+
 function App() {
   return (
     <Router>
     <div>
       <Header/>
-      <main className='py-3'>
+      <main >
       <Route path='/' component={Home} exact />
       <Route path='/register' component={Register} />
       <Route path='/login' component={Login} />

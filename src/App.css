@@ -1,4 +1,534 @@
-* {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+:root {
+  --light-blue: #1e90ff;
+  --dark-green: #648e06;
+  --green: #659107;
+  --grary: #666666;
 }
 
+body {
+  /* font-family: "Montserrat", sans-serif; */
+  background-color:white;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  font-family: 'Poppins', 'Montserrat', 'Open Sans', 'sans-serif';
+}
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none;
+}
+.btn{
+  text-transform: capitalize;
+}
+.navbar {
+  text-transform: capitalize}
+
+/* main category active */
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label .main-content {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+input[type=radio]:checked + label .content-category {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+/* category filter section start */
+.filter-category-section {
+  padding: 20px;
+  /* padding-right:45px;
+  padding-left: 45px; */
+  background-color: white;
+}
+
+.content-category {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.content-category:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+.category-title{
+  width: 100px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  color: var(--green);
+  cursor: pointer;
+}
+
+
+/* category filter section  end */
+
+
+
+
+/* category css start */
+
+/* category-section */
+.category-section {
+  padding-top: 30px;
+  /* padding-right:45px;
+  padding-left: 45px; */
+  background-color: white;
+}
+
+.layout-header {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+
+  /* Text Primary */
+
+  color: var(--grary);
+}
+
+.list-group .list-group-item {
+  /* width: 300px;
+  height: 300px; */
+  border-style: none;
+}
+.main-content:focus {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+.main-content {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.main-content:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+.main-content:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid var(--green);
+}
+
+.list-group .list-group-item .title {
+  width: 200px;
+  padding-top: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  text-align: center;
+  color: var(--green);
+  cursor: pointer;
+}
+
+.list-group .list-group-item img {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 170px;
+  height: 100px;
+  content: center;
+  /* width: 150px;
+  height: 150px; */
+  /* border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 12px; */
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .list-group .list-group-item .title {
+      font-size: 12px;
+      line-height: 20px;
+  }
+  .view-more {
+      font-size: 12px;
+      line-height: 20px;
+  }
+
+  .layout-header {
+      font-size: 16px;
+      line-height: 30px;
+  }
+}
+
+
+
+
+/* category css end */
+
+
+.view-more {
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 33px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  color: #363d43;
+}
+.view-more:hover {
+  color: var(--light-blue);
+}
+
+
+/* custom css for pruduct card */
+
+.product-section {
+  padding-top: 20px;
+  padding-right:45px;
+  padding-left: 45px;
+  background-color: white;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+      0.3s box-shadow,
+      0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  border: 1;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.product-card {
+  padding: 16px;
+  height: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 200px;
+}
+
+.product-title {
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #100f0f;
+}
+
+/* .product-title:hover {
+  color: #000000;
+  text-decoration: underline;
+} */
+
+.product-price {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--light-blue);
+}
+
+.vender-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+}
+
+.vender-link:hover {
+  font-weight: 600;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.vender-address {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15 px;
+  text-align: center;
+  color: var(--light-blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+.vender-address span {
+  color: var(--grary);
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+  padding: 5px;
+}
+
+.product-outline-btn {
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: var(--green);
+}
+
+.product-outline-btn:hover {
+  color: white;
+  background-color: var(--green);
+  border-radius: 8px;
+}
+
+.product-btn {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  background-color: var(--green);
+  border-radius: 8px;
+}
+.product-btn:hover {
+  color: white;
+  background-color: var(--dark-green);
+  border-radius: 8px;
+}
+
+/* responsive product card */
+@media screen and (max-width: 600px) {
+  .product-title {
+      font-size: 13px;
+      line-height: 15px;
+  }
+
+  .product-price {
+      font-size: 13px;
+      line-height: 15px;
+  }
+
+  .vender-link {
+      font-size: 11px;
+      line-height: 15px;
+  }
+  .vender-address {
+      font-size: 10px;
+  }
+  .vender-address span {
+      color: var(--grary);
+  }
+
+  .product-outline-btn {
+      font-size: 12px;
+      line-height: 15px;
+  }
+
+  .product-btn {
+      font-size: 12px;
+      line-height: 15px;
+  }
+}
+
+/* end custom css for pruduct card */
+
+
+/* css for about section */
+.about-section {
+  margin-top: -8px;
+  background-color: #f3faff;
+  height: auto;
+  padding:30px;
+}
+
+.about-section h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #414e5a;
+  opacity: 90%;
+  color: var(--grary);
+}
+
+.about-section p {
+  opacity: 90%;
+  padding-top: 10px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--grary);
+}
+
+.about-section h3 {
+  opacity: 80%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--green);
+}
+
+
+/* footer section */
+.footer-section {
+  /* margin-top: -8px; */
+  background-color: var(--green);
+  height: auto;
+  padding: 30px;
+}
+
+.footer-section .vertical {
+  opacity: 40%;
+  border-left: 1px solid white;
+  height: 86px;
+  position: absolute;
+  left: 50%;
+}
+
+.footer-section hr {
+  opacity: 40%;
+  color: white;
+}
+
+.footer-section .title {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.contact-details {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  text-align: center;
+}
+.contact-details:hover {
+  font-weight: 550;
+  color: white;
+}
+
+.footer-logo{
+ 
+  width: 150px;
+}
+
+.copyright {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: white;
+}
+
+.flow-us{
+  cursor: pointer;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  color: white;
+  }
+
+@media screen and (max-width: 750px) {
+  .about-section {
+      padding:10px;
+  }
+  .footer-section {
+      padding: 10px;
+  }
+  .footer-section .title {
+      font-size: 20px;
+      line-height: 35px;
+  }
+  .footer-logo{
+      /* visibility: hidden; */
+      width: 100px;
+  }
+  .copyright{
+      font-size: 10px;
+  }
+  .contact-details {
+      font-size: 12px;
+      line-height: 20px;
+  }
+  .contact-details:hover {
+      font-weight: 500;
+  }
+ 
+}

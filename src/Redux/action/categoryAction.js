@@ -19,7 +19,6 @@ try{
         `https://agro-mart-master-mci3mdx9yjmzf.herokuapp.com/v1/categories`,
         config
       ) 
-      console.log(data, 'categories from api');
       dispatch({
         type: GET_CATEGORIES_SUCCESS,
         payload: data,
