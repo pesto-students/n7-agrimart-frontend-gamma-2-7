@@ -1,33 +1,23 @@
-import Header from './Components/Header';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-// import Product from './Components/Product';
-import Footer from './Components/Footer';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Pages/Home';
+import NotFoundPage from './Pages/NotFoundPage';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
-import ProductPage from './Pages/ProductPage';
-import ProductEditPage from './Pages/ProductEditPage';
-import WishList from './Components/WishList';
-
-
+import ProductDetails from './Pages/ProductDetails';
 
 function App() {
   return (
     <Router>
-    <div>
-      <Header/>
-      <main >
-      <Route path='/' component={Home} exact />
-      <Route path='/register' component={Register} />
-      <Route path='/login' component={Login} />
-      <Route path='/product' component={ProductPage} />
-      <Route path='/products' component={ProductEditPage} />
-      <Route path='/wishlist' component={WishList} /> 
-      <Route path='/search/:keyword'component={Home} exact/>
-      </main>
-      <Footer/>
-    </div>
+      <Switch>
+        <Route path='/register' component={Register} />
+        <Route path='/login' component={Login} />
+        <Route path='/' component={Home} exact />
+        <Route path='/product/:id' render={(props) => {
+                    return ( <ProductDetails {...props } /> )
+                }} />
+        <Route path="*" component={NotFoundPage} />
+      </Switch>
     </Router>
   );
 }

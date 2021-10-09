@@ -21,6 +21,7 @@ const Product =() =>{
                 productState && productState.products.map((product) => {
                  return (<ProductItem
                         key={product.id}
+                        id={product.id}
                         img={product.images[0]}
                         title={product.title}
                         price={product.price}

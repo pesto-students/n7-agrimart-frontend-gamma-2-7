@@ -18,6 +18,12 @@ body {
   padding-right: 20px; */
   font-family: 'Poppins', 'Montserrat', 'Open Sans', 'sans-serif';
 }
+
+.form-control {
+  border: 1 solid #ced4da !important;
+  border-radius: 6px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
@@ -167,6 +173,7 @@ input[type=radio]:checked + label .content-category {
   width: 170px;
   height: 100px;
   content: center;
+  cursor: pointer;
   /* width: 150px;
   height: 150px; */
   /* border: 1px solid #d1d1d1;
@@ -246,6 +253,7 @@ input[type=radio]:checked + label .content-category {
 }
 
 .card-img-top {
+  cursor: pointer;
   width: 100%;
   border-radius: 12px;
   max-height: 200px;
