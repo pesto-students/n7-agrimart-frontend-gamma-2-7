@@ -14,7 +14,7 @@ const Product =() =>{
         {productState.loading && <Loader />}
       <section className="product-section">
         <div className="container-fluid">
-          <p className="layout-header">{productState.filterKeyword ? productState.filterKeyword : 'Featured Products'}</p>
+          <p className="layout-header">{productState.filterKeyword ? productState.filterKeyword : 'Products'}</p>
           <div className="container-fluid bg-trasparent " style={{ position: 'relative' }}>
             <div className="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  g-3">
               {
