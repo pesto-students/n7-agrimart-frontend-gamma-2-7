@@ -1,5 +1,11 @@
-# AgroMart
+# AgroMar
 
+## Table of Contents
+
+- [Pre-requisites](#pre-requisites)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- 
 ## Pre-requisites
 * Nodejs 12+
 * NPM packages (Install in global scope)
