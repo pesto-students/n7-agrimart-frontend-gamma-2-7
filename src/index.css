@@ -1,0 +1,129 @@
+.search {
+  display: flex;
+  padding-left: 200px;
+  /* justify-content: center; */
+}
+
+
+.footer-container {
+  justify-content: space-between !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 10px 30px 10px 30px !important;
+  flex-wrap: wrap !important;
+  height: fit-content;
+  width: 100vw !important;
+  color: black;
+  font-weight: 700;
+}
+.Registerbtn {
+  background-color: #648e06 !important;
+  width: 50%;
+  border-radius: 20px !important;
+}
+.navbar {
+  padding: 0px !important;
+}
+.seller-image{
+  width: 100%;
+  align-items: center;
+  border-radius: 12px;
+  max-height: 200px;
+}
+
+.seller-address {
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  color: var(--light-blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+.seller-address span {
+  color: var(--grary);
+}
+/*searchbar*/
+.dropdown-toggle{
+  border-radius: 20px 20px 20px 20px !important;
+  height: 45px !important;
+  border:  1px solid #648e06 !important;
+}
+.search{
+  border-radius: 0px 20px 20px 0px !important;
+  width: 127px;
+  font-family: Montserrat;
+  background-color: #648e06 !important;
+  height: 40px;
+}
+/* .form-control{
+  background-color: #fff !important;
+} */
+.searchbar{
+  border-radius: 20px 0px 0px 20px !important;
+  color: rgb(141, 125, 125);
+  height: 40px !important;
+  background-color: #fff !important;
+  border:  1px solid #648e06 !important;
+}
+* :focus{
+  box-shadow: none !important;
+}
+.filtertitle{
+  color: #648e06 !important;
+}
+.fitercard{
+  display: flex;
+  align-items: center;
+}
+.filterbody{
+  padding: 0px !important;
+}
+/*footer*/
+.footernav{
+  display: flex;
+  flex-direction: column !important;
+  align-items: baseline !important;
+  background-color: #648e06 !important;
+}
+.footercontent{
+  display: flex;
+  color: white !important;
+}
+.footermain{
+  display: flex !important;
+  flex-direction: column !important;
+  width: 80%;
+}
+
+/* Sell page*/
+.Sellmain{
+  display: flex !important;
+  justify-content: space-around;
+}
+.Sellbar>.dropdown-toggle{
+  background-color: #f7f7f9 !important;
+  color:#55595c !important;
+  border-radius: 0% !important;
+}
+.sell{
+  width: 20% !important;
+  margin-left: 40px !important;
+}
+.sellinput{
+  display: flex !important;
+}
+.Sellba>.dropdown-toggle{
+  border-radius: 0% !important;
+  margin-left: 20px !important;
+  background-color: #f7f7f9 !important;
+  color:#55595c !important;
+  border:none !important;
+} 
+.submitbtn{
+  background-color: #648e06 !important;
+  width: 25%;
+  border-radius: 20px !important;
+}
+.logintitle>.dropdown-toggle{
+  border: none !important;
+}
