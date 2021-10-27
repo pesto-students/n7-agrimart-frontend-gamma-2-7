@@ -5,7 +5,7 @@
 - [Pre-requisites](#pre-requisites)
 - [Getting Started](#getting-started)
 - [Available Scripts](#available-scripts)
-- 
+
 ## Pre-requisites
 * Nodejs 12+
 * NPM packages (Install in global scope)
@@ -16,7 +16,7 @@
 * Clone the repo
 * `cd {project folder}`
 * `yarn install` Or just `yarn`  - **DO NOT USE `npm install`**
-* 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
